@@ -4,9 +4,9 @@
 
 def rotate_2d_matrix(matrix):
     """Rotates a 2D matrix in place"""
-    if type(matrix) != list or len(matrix) <= 0:
+    if type(matrix) is not list or len(matrix) <= 0:
         return
-    containslist = all(map(lambda x: type(x) == list, matrix))
+    containslist = all(map(lambda x: type(x) is list, matrix))
     if not containslist:
         return
     rows = len(matrix)
